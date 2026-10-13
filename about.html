@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SoFresh Laundry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .main {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Navbar matching index.html */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(34, 34, 34, 0.95);
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .menu ul li a:hover {
+            color: #00bcd4;
+        }
+
+        /* About Section Layout */
+        .about-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .about-card {
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .about-section h1 {
+            font-size: 38px;
+            color: #222;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .about-section h1 span {
+            color: #00bcd4;
+        }
+
+        .about-section p {
+            font-size: 17px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #00bcd4;
+            font-weight: 600;
+        }
+
+        /* Features Grid */
+        .features-title {
+            font-size: 22px;
+            color: #333;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        .feature-item {
+            background: #9dadaf;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #00bcd4;
+            font-size: 15px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #222;
+            color: #aaa;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">SoFresh!!</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="slots.html">SLOT</a></li>
+                    <li><a href="contacts.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="about-section">
+            <div class="about-card">
+                <h1>About <span>SoFresh Laundry</span></h1>
+                <p>
+                    <span class="highlight">SoFresh!!</span> is your trusted partner in convenient and reliable laundry services. 
+                    Founded on the idea of making laundry simple, we provide a <span class="highlight">smart online platform</span> that 
+                    allows users to book laundry slots easily from the comfort of their homes.
+                </p>
+                <p>
+                    Our mission is to save your time and effort by providing <span class="highlight">fast, affordable, and high-quality</span> 
+                    laundry solutions. Whether you need washing, ironing, or professional care — we’ve got you covered!
+                </p>
+
+                <h3 class="features-title">What Makes Us Different?</h3>
+                <div class="features-grid">
+                    <div class="feature-item">✅ Easy Online Slot Booking</div>
+                    <div class="feature-item">✅ Timely Pickup & Delivery</div>
+                    <div class="feature-item">✅ Clean, Fresh Clothes Every Time</div>
+                    <div class="feature-item">✅ Seamless Order Tracking</div>
+                </div>
+
+                <p>
+                    Join the SoFresh community today and experience laundry like never before!
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2026 SoFresh!! Laundry Services. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

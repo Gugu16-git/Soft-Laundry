@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SoFresh Laundry</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .main {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Navbar matching the rest of the site */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(34, 34, 34, 0.95);
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .menu ul li a:hover {
+            color: #00bcd4;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-section h1 {
+            font-size: 38px;
+            color: #222;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .contact-section h1 span {
+            color: #00bcd4;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        .contact-form, .contact-info {
+            flex: 1 1 45%;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            background-color: #fafafa;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: #00bcd4;
+            background-color: #fff;
+        }
+
+        .contact-form button {
+            background-color: #00bcd4;
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.2s ease;
+            width: 100%;
+        }
+
+        .contact-form button:hover {
+            background-color: #0097a7;
+            transform: translateY(-2px);
+        }
+
+        .contact-info h3 {
+            font-size: 20px;
+            color: #222;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            color: #555;
+            margin: 18px 0;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.5;
+        }
+
+        .contact-info ion-icon {
+            font-size: 22px;
+            margin-right: 15px;
+            color: #00bcd4;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .social-heading {
+            font-weight: 600;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #f4fbfc;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #00bcd4;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #00bcd4;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #222;
+            color: #aaa;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">SoFresh!!</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="slots.html">SLOT</a></li>
+                    <li><a href="contacts.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <div class="contact-card">
+                <h1>Get in <span>Touch</span></h1>
+                <div class="contact-container">
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <form>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p><ion-icon name="location-outline"></ion-icon> D110, Ncanana Road, Unit 4, Hammarsdale</p>
+                        <p><ion-icon name="time-outline"></ion-icon> Mon – Sat: 7:00 AM – 8:00 PM</p>
+                        <p><ion-icon name="call-outline"></ion-icon> 0635336738</p>
+                        <p><ion-icon name="mail-outline"></ion-icon> gmbambo228@gmail.com</p>
+
+                        <p class="social-heading">Connect with us:</p>
+                        <div class="social-icons">
+                            <a href="https://wa.me/27635336738" target="_blank" title="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                            <a href="mailto:gmbambo228@gmail.com" title="Email"><ion-icon name="mail-outline"></ion-icon></a>
+                            <a href="#" target="_blank" title="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2026 SoFresh!! Laundry Services. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

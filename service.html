@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Our Services - SoFresh Laundry</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 20px 50px;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu ul li {
+            margin-left: 30px;
+        }
+
+        .menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s ease;
+        }
+
+        .menu ul li a:hover {
+            color: #00bcd4;
+        }
+
+        .services-section {
+            padding: 60px 80px;
+            background-color: #fff;
+        }
+
+        .services-section h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #fafafa;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #00bcd4;
+            margin-top: 0;
+        }
+
+        .service-card p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #222;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">SoFresh!!</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="slots.html">SLOT</a></li>
+                    <li><a href="contacts.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="services-section">
+            <h1>Our Laundry Services</h1>
+            <div class="service-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <h3>Wash & Fold</h3>
+                    <p>
+                        Drop your laundry off and we’ll handle the rest. Washed with premium detergent, folded neatly, and ready for pickup or delivery. Ideal for everyday clothes.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <h3>Dry Cleaning</h3>
+                    <p>
+                        Perfect for delicate fabrics like suits, dresses, and coats. We use environmentally-friendly solvents to gently clean and preserve your clothes.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <h3>Iron Only</h3>
+                    <p>
+                        Have clothes that are clean but wrinkled? Use our ironing-only service for perfectly pressed garments. Fast turnaround and professional finish.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <h3>Stain Removal</h3>
+                    <p>
+                        Tough stains from wine, oil, ink, or sweat? We specialize in deep stain treatment and fabric-safe techniques to restore your clothes like new.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <h3>Pickup & Delivery</h3>
+                    <p>
+                        Busy schedule? Use our pickup & delivery service and get your laundry done without leaving home. On-time, professional, and contact-free.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <h3>Express Service</h3>
+                    <p>
+                        Need clean clothes fast? Use our 24-hour express laundry option to get your laundry done urgently without sacrificing quality.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2025 SoFresh!! Laundry Services. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>

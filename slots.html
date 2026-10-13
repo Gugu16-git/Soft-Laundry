@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Book a Slot - SoFresh Laundry</title>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+            padding: 20px 50px;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu ul li {
+            margin-left: 30px;
+        }
+
+        .menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .menu ul li a:hover {
+            color: #00bcd4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        select, input, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #00bcd4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0097a7;
+        }
+
+        .message {
+            text-align: center;
+            font-size: 18px;
+            color: green;
+            display: none;
+        }
+
+        .error {
+            text-align: center;
+            font-size: 16px;
+            color: red;
+            display: none;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #222;
+            color: #ccc;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2 class="logo">SoFresh!!</h2>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="slot.html">SLOT</a></li>
+                <li><a href="contacts.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Booking Form -->
+    <div class="container">
+        <h2>Book Your Laundry Slot</h2>
+        <form id="bookingForm" action="https://formsubmit.co/gmbambo228@gmail.com" method="POST" onsubmit="return validateBooking(event)">
+            <label for="bucket">Select Bucket Size:</label>
+            <select id="bucket" name="Bucket Size" required>
+                <option value="">-- Choose --</option>
+                <option value="Small Bucket (R50)">Small Bucket (R50)</option>
+                <option value="Medium Bucket (R80)">Medium Bucket (R80)</option>
+                <option value="Large Bucket (R120)">Large Bucket (R120)</option>
+            </select>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="Date" required>
+
+            <label for="time">Select Time:</label>
+            <input type="time" id="time" name="Time" required>
+
+            <input type="hidden" name="_subject" value="New Laundry Booking">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <button type="submit">Book Slot</button>
+        </form>
+
+        <div class="message" id="successMsg">✅ Booking confirmed! Your pickup number is: <span id="pickupId"></span></div>
+        <div class="error" id="errorMsg">⚠️ Sorry, this time slot has already been booked. Try a different one.</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 SoFresh!! Laundry Services. All rights reserved.
+    </div>
+
+    <script>
+        const bookedSlots = new Set(); // for demo, store in-memory
+
+        function validateBooking(e) {
+            e.preventDefault();
+
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+            const key = date + "-" + time;
+
+            if (bookedSlots.has(key)) {
+                document.getElementById("errorMsg").style.display = "block";
+                document.getElementById("successMsg").style.display = "none";
+                return false;
+            }
+
+            // Mark as booked
+            bookedSlots.add(key);
+
+            // Generate a random pickup number
+            const pickupNum = Math.floor(Math.random() * 90000) + 10000;
+            document.getElementById("pickupId").innerText = pickupNum;
+            document.getElementById("successMsg").style.display = "block";
+            document.getElementById("errorMsg").style.display = "none";
+
+            // Submit the form after short delay
+            setTimeout(() => {
+                document.getElementById("bookingForm").submit();
+            }, 1000);
+
+            return false;
+        }
+    </script>
+</body>
+</html>

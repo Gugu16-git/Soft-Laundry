@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - SoFresh Laundry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .main {
+            width: 100%;
+            min-height: 100vh;
+            /* Background image with a dark gradient overlay for modern readability */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=1920&q=80');
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(34, 34, 34, 0.85);
+            backdrop-filter: blur(5px);
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .menu ul li a:hover {
+            color: #00bcd4;
+        }
+
+        .content {
+            text-align: center;
+            padding: 80px 20px;
+            color: #fff;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .content h1 {
+            font-size: 52px;
+            line-height: 1.2;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .content h1 span {
+            color: #00bcd4;
+        }
+
+        .par {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #e0e0e0;
+            margin-bottom: 35px;
+        }
+
+        .cn {
+            display: inline-block;
+            background-color: #00bcd4;
+            padding: 14px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .cn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .cn:hover {
+            background-color: #0097a7;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background-color: rgba(22, 22, 22, 0.95);
+            color: #aaa;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">SoFresh!!</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="slots.html">SLOT</a></li>
+                    <li><a href="contacts.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Intro Content -->
+        <div class="content">
+            <h1>SoFresh <br><span>Laundry</span><br>The Best Choice</h1>
+            <p class="par">Get your laundry done with absolute ease. Say goodbye to dirty laundry and hello to free time.<br>Book your laundry slots online instantly, track your progress, and enjoy fresh, perfectly folded clothes.</p>
+
+            <button class="cn"><a href="slots.html">Book a Slot Now</a></button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2026 SoFresh!! Laundry Services. All rights reserved.
+        </div>
+    </div>
+
+</body>
+</html>
